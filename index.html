@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="scheduler">
+        <h1>AI Scheduler</h1>
+        <form id="schedule-form">
+            <label for="task">Task:</label>
+            <input type="text" id="task" name="task" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            <button type="submit">Schedule</button>
+        </form>
+        <div id="schedule-result"></div>
+        <div id="error-message"></div>
+        <div id="feedback-form" style="display: none;">
+            <p>How acceptable was the error? (1-5)</p>
+            <input type="number" id="acceptability" name="acceptability" min="1" max="5">
+            <p>How much do you trust the AI? (1-5)</p>
+            <input type="number" id="trust" name="trust" min="1" max="5">
+            <button id="submit-feedback">Submit Feedback</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
