@@ -3,6 +3,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100vh;
     background-color: #f4f4f4;
 }
@@ -13,6 +14,7 @@ body {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 300px;
+    margin-bottom: 20px;
 }
 
 form label {
@@ -40,4 +42,26 @@ button {
 
 button:hover {
     background-color: #4cae4c;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#ai-assistant {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#ai-assistant img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#error-message {
+    color: red;
+    font-weight: bold;
 }

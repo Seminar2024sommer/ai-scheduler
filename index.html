@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Scheduler</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css">
 </head>
 <body>
     <div id="scheduler">
@@ -19,15 +20,13 @@
             <button type="submit">Schedule</button>
         </form>
         <div id="schedule-result"></div>
-        <div id="error-message"></div>
-        <div id="feedback-form" style="display: none;">
-            <p>How acceptable was the error? (1-5)</p>
-            <input type="number" id="acceptability" name="acceptability" min="1" max="5">
-            <p>How much do you trust the AI? (1-5)</p>
-            <input type="number" id="trust" name="trust" min="1" max="5">
-            <button id="submit-feedback">Submit Feedback</button>
+        <div id="calendar"></div>
+        <div id="ai-assistant">
+            <img src="ai-assistant.png" alt="AI Assistant">
+            <div id="error-message"></div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
