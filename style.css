@@ -2,32 +2,21 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    align-items: flex-start;  /* Changed from center to flex-start */
     height: 100vh;
     background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    padding: 20px;  /* Added padding */
+    box-sizing: border-box;  /* Include padding in height calculation */
 }
 
-#scheduler-container {
-    display: flex;
-    width: 80%;
-    height: 80vh;
-}
-
-#scheduler-form {
-    flex: 1;
-    padding: 20px;
+#scheduler {
     background: white;
-    border-right: 1px solid #ddd;
-    box-sizing: border-box;
-}
-
-#calendar-container {
-    flex: 2;
     padding: 20px;
-    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;  /* Added max-width */
+    text-align: center;
 }
 
 form label {
@@ -58,36 +47,29 @@ button:hover {
 }
 
 #calendar {
-    max-width: 100%;
-    margin: 0 auto;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 #ai-assistant {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    max-width: 300px;
-    text-align: center;
+    position: relative;
+    margin-top: 20px;
+    text-align: left;
 }
 
-#ai-assistant img {
+#assistant-image {
     width: 50px;
-    height: 50px;
-    margin-right: 10px;
+    vertical-align: middle;
 }
 
-.dialog {
-    color: red;
-    font-weight: bold;
-    background: #ffe6e6;
+#ai-message {
+    display: inline-block;
+    max-width: 300px;
+    margin-left: 10px;
     padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    white-space: pre-line;
+    background-color: #f9f9f9;
 }

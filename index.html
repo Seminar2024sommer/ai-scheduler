@@ -5,34 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Scheduler</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.1/main.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5.10.1/main.min.css">
+    <link href='https://unpkg.com/fullcalendar@5.10.1/main.min.css' rel='stylesheet' />
 </head>
 <body>
-    <div id="scheduler-container">
-        <div id="scheduler-form">
-            <h1>AI Scheduler</h1>
-            <form id="schedule-form">
-                <label for="task">Task:</label>
-                <input type="text" id="task" name="task" required>
-                <label for="date">Date:</label>
-                <input type="date" id="date" name="date" required>
-                <label for="time">Time:</label>
-                <input type="time" id="time" name="time" required>
-                <button type="submit">Schedule</button>
-            </form>
-            <div id="schedule-result"></div>
+    <div id="scheduler">
+        <h1>AI Scheduler</h1>
+        <form id="schedule-form">
+            <label for="task">Task:</label>
+            <input type="text" id="task" name="task" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            <button type="submit">Schedule</button>
+        </form>
+        <div id="ai-assistant">
+            <img src="ai-assistant.png" alt="AI Assistant" id="assistant-image">
+            <div id="ai-message"></div>
         </div>
-        <div id="calendar-container">
-            <div id="calendar"></div>
-        </div>
+        <div id="schedule-result"></div>
+        <div id="calendar"></div>
     </div>
-    <div id="ai-assistant">
-        <img src="ai-assistant.png" alt="AI Assistant">
-        <div id="error-message" class="dialog"></div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@5.10.1/main.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@5.10.1/main.min.js"></script>
+    <script src='https://unpkg.com/fullcalendar@5.10.1/main.min.js'></script>
     <script src="script.js"></script>
 </body>
 </html>
