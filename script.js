@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const errorMessage = errorMessages[Math.floor(Math.random() * errorMessages.length)];
         const translatedErrorMessage = translateError(errorMessage);
         displayAiMessage(translatedErrorMessage);
-        resultDiv.innerText = 'ERROR!';
+        resultDiv.innerText = ' ';
     }
 
     function translateError(message) {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showSurveyLink() {
         const surveyLink = document.createElement('a');
         surveyLink.href = 'https://forms.gle/zFWLuLfwqnG7MCdH7';
-        surveyLink.innerText = `We are conducting a study and would appreciate your participation in this survey. You belong to ${currentGroup}.`;
+        surveyLink.innerText = `We are conducting a study and would appreciate your participation in this survey, please click here. You belong to ${currentGroup}.`;
         surveyLink.target = '_blank';
         resultDiv.appendChild(surveyLink);
     }
