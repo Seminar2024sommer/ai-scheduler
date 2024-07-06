@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     break;
             }
 
-            document.getElementById('error-message').innerText = `${errorMessage} (${translatedMessage})`;
+            document.getElementById('error-message').innerText = `${errorMessage}\n(${translatedMessage})`;
             
             const surveyLink = document.createElement('div');
             surveyLink.innerHTML = `<p>您参与了一个实验，希望您能参与我们的调查。</p>

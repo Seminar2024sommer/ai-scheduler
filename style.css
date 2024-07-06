@@ -6,15 +6,28 @@ body {
     flex-direction: column;
     height: 100vh;
     background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
 }
 
-#scheduler {
-    background: white;
+#scheduler-container {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+#scheduler-form {
+    flex: 1;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    width: 300px;
-    margin-bottom: 20px;
+    background: white;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+#calendar-container {
+    flex: 2;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 form label {
@@ -45,14 +58,22 @@ button:hover {
 }
 
 #calendar {
-    max-width: 900px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 #ai-assistant {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 300px;
 }
 
 #ai-assistant img {
@@ -64,4 +85,8 @@ button:hover {
 #error-message {
     color: red;
     font-weight: bold;
+    background: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-line;
 }
